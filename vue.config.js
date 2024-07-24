@@ -8,7 +8,6 @@ module.exports = {
   productionSourceMap: true,
   outputDir: helDevUtils.cst.HEL_DIST_DIR,
   configureWebpack: config => {
-    config.output.library = appInfo.groupName;
     config.output.libraryTarget = 'umd';
     config.output.jsonpFunction = appInfo.jsonpFnName;
     config.externals = appInfo.externals;
