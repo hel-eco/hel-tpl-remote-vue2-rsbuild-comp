@@ -5,7 +5,7 @@
   "module": "hel_proxy_es/entry.js",
   "types": "src/entrance/libTypes.ts",
   "unpkg": "hel_dist/index.html",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "files": [
     "hel_dist",
     "hel_proxy",
@@ -32,13 +32,12 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "hel-iso": "^4.3.2",
+    "hel-iso": "^4.4.0",
     "hel-lib-proxy": "^4.7.0",
     "vue": "^2.6.11"
   },
   "peerDependencies": {
     "core-js": "^3.6.5",
-    "hel-iso": "^4.3.2",
     "hel-lib-proxy": "^4.7.0",
     "vue": "^2.6.11"
   },
