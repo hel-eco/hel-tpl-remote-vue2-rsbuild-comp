@@ -15,36 +15,33 @@
     "src"
   ],
   "scripts": {
-    "start": "npm run start:App",
-    "start:App": "cross-env PORT=7001 VUE_APP_COMP=App vue-cli-service serve",
-    "start:Hello": "cross-env PORT=7001 VUE_APP_COMP=HelloWorld vue-cli-service serve",
-    "build": "npm run check_name && npm run build_dist && npm run build_meta && npm run build_proxy",
-    "build_dist": "vue-cli-service build",
+    "serve": "rsbuild dev",
+    "start": "pnpm run start:App",
+    "start:App": "cross-env VUE_APP_COMP=App rsbuild dev",
+    "start:Hello": "cross-env VUE_APP_COMP=HelloWorld rsbuild dev",
+    "build": "pnpm run check_name && pnpm run build_dist && pnpm run build_meta && pnpm run build_proxy",
+    "build_dist": "rsbuild build",
     "check_name": "node ./scripts/check.js",
-    "build_proxy": "npm run build_proxy_umd && npm run build_proxy_es && shx cp ./hel_proxy/entry.js ./hel_dist",
+    "build_proxy": "pnpm run build_proxy_umd && pnpm run build_proxy_es && shx cp ./hel_proxy/entry.js ./hel_dist",
     "build_proxy_umd": "rollup -c",
     "build_proxy_es": "cross-env BUILD_ENV=es rollup -c",
-    "build_cust": "npm run set_home_page \"npm run build && npm run build_meta\"",
+    "build_cust": "pnpm run set_home_page \"pnpm run build && pnpm run build_meta\"",
     "set_home_page": "cross-env-shell HEL_APP_HOME_PAGE=http://127.0.0.1:9001",
     "build_meta": "node scripts/meta.js",
-    "lint": "vue-cli-service lint",
     "prepublishOnly": "node ./scripts/prepublishOnly.js"
   },
   "dependencies": {
-    "core-js": "^3.6.5",
     "hel-iso": "^4.4.0",
     "hel-lib-proxy": "^4.7.0",
-    "vue": "^2.7.16"
+    "vue": "2.7.16"
   },
   "peerDependencies": {
-    "core-js": "^3.6.5",
     "hel-lib-proxy": "^4.7.0",
     "vue": "2.7.16"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
+    "@rsbuild/core": "^1.5.17",
+    "@rsbuild/plugin-vue2": "^1.0.4",
     "babel-eslint": "^10.1.0",
     "cross-env": "^7.0.3",
     "eslint": "^6.7.2",

@@ -1,5 +1,5 @@
 import { isMasterApp } from 'hel-iso';
-import * as Vue from 'vue';
+import  Vue from 'vue';
 import { LIB_NAME } from './configs/subApp';
 import { libReady } from 'hel-lib-proxy';
 // import { preFetchLib } from 'hel-micro';
