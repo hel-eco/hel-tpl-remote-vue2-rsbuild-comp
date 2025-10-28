@@ -2,7 +2,7 @@
   <div class="hello">
     <hr />
     <h1>{{ msg }}</h1>
-    <h2>I am a remote vue compoent</h2>
+    <h2>我是一个远程Vue组件</h2>
   </div>
 </template>
 

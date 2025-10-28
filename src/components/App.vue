@@ -2,7 +2,7 @@
   <div id="app">
     <img alt="Vue logo" src="../assets/logo.png" />
     <h2>name: {{name}}</h2>
-    <HelloWorld msg="Welcome to view project hel-tpl-remote-vue-comp ( from unpkg deploy )" />
+    <HelloWorld msg="欢迎查看项目 hel-tpl-remote-vue-comp" />
   </div>
 </template>
 
