@@ -27,6 +27,9 @@ importers:
       babel-eslint:
         specifier: ^10.1.0
         version: 10.1.0(eslint@6.8.0)
+      chalk:
+        specifier: ^5.6.2
+        version: 5.6.2
       cross-env:
         specifier: ^7.0.3
         version: 7.0.3
@@ -173,25 +176,21 @@ packages:
     resolution: {integrity: sha512-UAWCsOnpkvy8eAVRo0uipbHXDhnoDq5zmqWTMhpga0/a3yzCp2e+fnjZb/qnFNYb5MeL0O1mwMOYgn1M3oHILQ==}
     cpu: [arm64]
     os: [linux]
-    libc: [glibc]
 
   '@rspack/binding-linux-arm64-musl@1.5.8':
     resolution: {integrity: sha512-GnSvGT4GjokPSD45cTtE+g7LgghuxSP1MRmvd+Vp/I8pnxTVSTsebRod4TAqyiv+l11nuS8yqNveK9qiOkBLWw==}
     cpu: [arm64]
     os: [linux]
-    libc: [musl]
 
   '@rspack/binding-linux-x64-gnu@1.5.8':
     resolution: {integrity: sha512-XLxh5n/pzUfxsugz/8rVBv+Tx2nqEM+9rharK69kfooDsQNKyz7PANllBQ/v4svJ+W0BRHnDL4qXSGdteZeEjA==}
     cpu: [x64]
     os: [linux]
-    libc: [glibc]
 
   '@rspack/binding-linux-x64-musl@1.5.8':
     resolution: {integrity: sha512-gE0+MZmwF+01p9/svpEESkzkLpBkVUG2o03YMpwXYC/maeRRhWvF8BJ7R3i/Ls/jFGSE87dKX5NbRLVzqksq/w==}
     cpu: [x64]
     os: [linux]
-    libc: [musl]
 
   '@rspack/binding-wasm32-wasi@1.5.8':
     resolution: {integrity: sha512-cfg3niNHeJuxuml1Vy9VvaJrI/5TakzoaZvKX2g5S24wfzR50Eyy4JAsZ+L2voWQQp1yMJbmPYPmnTCTxdJQBQ==}
@@ -657,6 +656,10 @@ packages:
   chalk@4.1.2:
     resolution: {integrity: sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA==}
     engines: {node: '>=10'}
+
+  chalk@5.6.2:
+    resolution: {integrity: sha512-7NzBL0rN6fMUW+f7A6Io4h40qQlG+xGmtMxfbnH/K7TAtt8JQWVQK+6g0UXKMeVJoyV5EkkNsErQ8pVD3bLHbA==}
+    engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
 
   chardet@0.7.0:
     resolution: {integrity: sha512-mT8iDcrh03qDGRRmoA2hmBJnxpllMR+0/0qlzjqZES6NdiWDcZkCNAk4rPFZ9Q85r27unkiNNg8ZOiwZXBHwcA==}
@@ -1433,13 +1436,11 @@ packages:
     peerDependencies:
       hel-micro-core: ^4.13.1
       hel-types: ^4.3.10
-    bundledDependencies: []
 
   hel-micro-core@4.13.1:
     resolution: {integrity: sha512-Ro3NG5ZcavLynK6flP3D6u+/O/jgXEBlsLe3iVu4zR7jmE+JCGSbpoXChv2vFqXV+Ut84hXitWSHx805m9xzNg==}
     peerDependencies:
       hel-types: ^4.3.10
-    bundledDependencies: []
 
   hel-types@4.3.10:
     resolution: {integrity: sha512-8IN3+Tn4p2Uq0Z3geoE6/Fs9Esqj6+IT8Vsm0v8/PREMwh9yq9WUgYZQUKTJjE87GspG94ioLJdsBvUxU4pJlA==}
@@ -3684,6 +3685,8 @@ snapshots:
     dependencies:
       ansi-styles: 4.3.0
       supports-color: 7.2.0
+
+  chalk@5.6.2: {}
 
   chardet@0.7.0: {}
 
