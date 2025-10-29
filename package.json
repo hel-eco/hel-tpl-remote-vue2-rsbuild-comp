@@ -1,11 +1,11 @@
 {
-  "name": "hel-tpl-remote-vue-comps",
-  "appGroupName": "hel-tpl-remote-vue-comps",
+  "name": "hel-tpl-remote-vue2-rsbuild-comp",
+  "appGroupName": "hel-tpl-remote-vue2-rsbuild-comp",
   "main": "hel_proxy/entry.js",
   "module": "hel_proxy_es/entry.js",
   "types": "src/entrance/libTypes.ts",
   "unpkg": "hel_dist/index.html",
-  "version": "1.5.1",
+  "version": "1.0.0",
   "files": [
     "hel_dist",
     "hel_proxy",
@@ -27,6 +27,8 @@
     "build_proxy_es": "cross-env BUILD_ENV=es rollup -c",
     "build_cust": "pnpm run set_home_page \"pnpm run build && pnpm run build_meta\"",
     "set_home_page": "cross-env-shell HEL_APP_HOME_PAGE=http://127.0.0.1:9001",
+    "server": "cd hel_dist && http-server --cors -p 9001",
+    "server:local": "npm run build_cust && npm run server",
     "build_meta": "node scripts/meta.js",
     "prepublishOnly": "node ./scripts/prepublishOnly.js"
   },
@@ -75,7 +77,7 @@
     "not dead"
   ],
   "volta": {
-    "node": "20.19.5",
+    "node": "20.19.4",
     "pnpm": "9.15.9"
   }
 }

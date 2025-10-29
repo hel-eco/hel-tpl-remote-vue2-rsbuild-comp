@@ -6,4 +6,4 @@
 |--------------------------------------------------------------------------
 */
 
-export const LIB_NAME = 'hel-tpl-remote-vue-comps';
+export const LIB_NAME = 'hel-tpl-remote-vue2-rsbuild-comp';
