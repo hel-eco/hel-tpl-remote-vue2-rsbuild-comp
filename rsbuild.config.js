@@ -31,6 +31,6 @@ export default defineConfig({
     },
     dev:{
         assetPrefix: 'http://localhost:7001/',
-        lazyCompilation: true,
+        lazyCompilation: false, // 若使用了懒加载组件，必须开发环境关闭此配置，否则报错Failed to resolve async component: async () => await
     }
 });

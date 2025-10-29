@@ -8,7 +8,9 @@
 import App from './App.vue';
 import HelloWorld from './HelloWorld.vue';
 
+const LazyLoadComp = () => import('./LazyLoadComp.vue');
 export default {
-  App,
-  HelloWorld,
+    App,
+    HelloWorld,
+    LazyLoadComp
 };
