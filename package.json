@@ -73,5 +73,9 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "volta": {
+    "node": "20.19.5",
+    "pnpm": "9.15.9"
+  }
 }
